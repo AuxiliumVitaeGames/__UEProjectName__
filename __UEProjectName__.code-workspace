@@ -1,0 +1,1536 @@
+{
+	"folders": [
+		{
+			"name": "__UEProjectName__",
+			"path": "."
+		}
+	],
+	"settings": {
+		"projectName": "UEProjectName",
+		"enginePath": "C:/Program Files/Epic Games/UE_5.0EA", // ../UE_Version
+		"C_Cpp.clang_format_fallbackStyle": "{ IndentWidth: 4, Language: Cpp, DerivePointerAlignment: false, PointerAlignment: Left, ColumnLimit: 128}", //_*
+		"C_Cpp.clang_format_sortIncludes": false, //_*
+		"C_Cpp.default.compileCommands": "${workspaceFolder}/Configuration/C_Cpp_default_compileCommands.json",
+		"C_Cpp.default.defines": [
+			"_DEBUG",
+			"UNICODE",
+			"_UNICODE"
+		],
+		//*
+		"C_Cpp.default.includePath": [
+			"${default}"
+		], //*/
+		"C_Cpp.default.windowsSdkVersion": "10.0.19041.0",
+		"C_Cpp.default.cppStandard": "c++17",
+		"C_Cpp.default.cStandard": "c17",
+		"C_Cpp.default.intelliSenseMode": "msvc-x64",
+		"C_Cpp.errorSquiggles": "Disabled", //_*
+		"clang.cxxflags": [
+			"-Wno-pragma-once-outside-header"
+		],
+		"editor.formatOnSave": true, //_*
+		"editor.mouseWheelZoom": true, //_*
+		"editor.rulers": [
+			128
+		],
+		"editor.suggestSelection": "first", //_*
+		"editor.tabSize": 4, //_*
+		"editor.wordWrap": "wordWrapColumn", //_*
+		"editor.wordWrapColumn": 128, //_*
+		"explorer.autoReveal": false, //_*
+		"explorer.confirmDragAndDrop": false, //_*
+		"explorer.openEditors.visible": 4, //_*
+		"extensions.closeExtensionDetailsOnViewChange": true, //_*
+		"files.associations": {
+			"array": "cpp",
+			"atomic": "cpp",
+			"bit": "cpp",
+			"*.tcc": "cpp",
+			"cctype": "cpp",
+			"clocale": "cpp",
+			"cmath": "cpp",
+			"compare": "cpp",
+			"concepts": "cpp",
+			"cstdarg": "cpp",
+			"cstddef": "cpp",
+			"cstdint": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"cwchar": "cpp",
+			"cwctype": "cpp",
+			"deque": "cpp",
+			"unordered_map": "cpp",
+			"vector": "cpp",
+			"exception": "cpp",
+			"algorithm": "cpp",
+			"functional": "cpp",
+			"iterator": "cpp",
+			"memory": "cpp",
+			"memory_resource": "cpp",
+			"numeric": "cpp",
+			"optional": "cpp",
+			"random": "cpp",
+			"string": "cpp",
+			"string_view": "cpp",
+			"system_error": "cpp",
+			"tuple": "cpp",
+			"type_traits": "cpp",
+			"utility": "cpp",
+			"initializer_list": "cpp",
+			"iosfwd": "cpp",
+			"iostream": "cpp",
+			"istream": "cpp",
+			"limits": "cpp",
+			"new": "cpp",
+			"ostream": "cpp",
+			"ranges": "cpp",
+			"stdexcept": "cpp",
+			"streambuf": "cpp",
+			"typeinfo": "cpp",
+			"fstream": "cpp",
+			"chrono": "cpp",
+			"ctime": "cpp",
+			"ratio": "cpp",
+			"iomanip": "cpp",
+			"sstream": "cpp",
+			"cstring": "cpp",
+			"ios": "cpp",
+			"map": "cpp",
+			"xfacet": "cpp",
+			"xiosbase": "cpp",
+			"xlocale": "cpp",
+			"xlocinfo": "cpp",
+			"xlocmon": "cpp",
+			"xlocnum": "cpp",
+			"xloctime": "cpp",
+			"xmemory": "cpp",
+			"xstddef": "cpp",
+			"xstring": "cpp",
+			"xtr1common": "cpp",
+			"xtree": "cpp",
+			"xutility": "cpp"
+		}, //*/
+		"files.exclude": {
+			"**/.DS_Store/": true,
+			"**/.git/": true,
+			"**/.hg/": true,
+			"**/.history/": true,
+			"**/.pytest_cache/": true,
+			"**/.svn/": true,
+			"**/.vscode/": true,
+			"**/CVS/": true
+		},
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "bash",
+				"icon": "terminal-bash"
+			}
+		}, //_*
+		"terminal.integrated.profiles.osx": {
+			"bash": {
+				"path": "bash",
+				"args": [
+					"-l"
+				],
+				"icon": "terminal-bash"
+			}
+		}, //_*
+		"typescript.tsc.autoDetect": "off",
+		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", //_*
+		"window.zoomLevel": 1.25, //_*1.25
+		"workbench.startupEditor": "none",
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ajshort.include-autocomplete",
+			"mitaki28.vscode-clang",
+			"jeff-hykin.better-cpp-syntax",
+			"prb28.amiga-assembly", //*/
+			"captncaps.ue4-snippets",
+			"suvam0451.sleeping-forest-ue4", //*/
+		],
+		"unwantedRecommendations": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			/*
+			{
+				"label": "Project Win32 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win32 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win32 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win32 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win32 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win32 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win32 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win32",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},//*/
+			{
+				"label": "Project Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			/*
+			{
+				"label": "Project Win64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Win64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Win64",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project HoloLens Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project HoloLens DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project HoloLens Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project HoloLens Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project HoloLens Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project HoloLens Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"HoloLens",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Android Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Android DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Android Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Android Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Shipping",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Project Android Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "Project Android Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}",
+					"Android",
+					"Test",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"Debug",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"DebugGame",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Build",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			},
+			{
+				"label": "ProjectEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Clean",
+				"args": [
+					"${config:projectName}Editor",
+					"Win64",
+					"Development",
+					"${workspaceFolder}/${config:projectName}.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "${config:enginePath}"
+				}
+			}//*/
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			/*
+			{
+				"name": "Project (Debug)",
+				"request": "launch",
+				"preLaunchTask": "Project Win64 Debug Build",
+				"program": "${workspaceFolder}/Binaries/Win64/${config:projectName}-Win64-Debug",
+				"args": [],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			{
+				"name": "Project (DebugGame)",
+				"request": "launch",
+				"preLaunchTask": "Project Win64 DebugGame Build",
+				"program": "${workspaceFolder}/Binaries/Win64/${config:projectName}-Win64-DebugGame",
+				"args": [],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},
+			/*
+			{
+				"name": "Project (Development)",
+				"request": "launch",
+				"preLaunchTask": "Project Win64 Development Build",
+				"program": "${workspaceFolder}/Binaries/Win64/${config:projectName}",
+				"args": [],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			/*
+			{
+				"name": "Project (Shipping)",
+				"request": "launch",
+				"preLaunchTask": "Project Win64 Shipping Build",
+				"program": "${workspaceFolder}/Binaries/Win64/${config:projectName}-Win64-Shipping",
+				"args": [],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			/*
+			{
+				"name": "Project (Test)",
+				"request": "launch",
+				"preLaunchTask": "Project Win64 Test Build",
+				"program": "${workspaceFolder}/Binaries/Win64/${config:projectName}-Win64-Test",
+				"args": [],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			/*
+			{
+				"name": "ProjectEditor (Debug)",
+				"request": "launch",
+				"preLaunchTask": "ProjectEditor Win64 Debug Build",
+				"program": "${config:enginePath}/Engine/Binaries/Win64/UnrealEditor-Win64-Debug",
+				"args": [
+					"${workspaceFolder}/${config:projectName}.uproject"
+				],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			/*
+			{
+				"name": "ProjectEditor (DebugGame)",
+				"request": "launch",
+				"preLaunchTask": "ProjectEditor Win64 DebugGame Build",
+				"program": "${config:enginePath}/Engine/Binaries/Win64/UnrealEditor-Win64-DebugGame",
+				"args": [
+					"${workspaceFolder}/${config:projectName}.uproject"
+				],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			/*
+			{
+				"name": "ProjectEditor (Development)",
+				"request": "launch",
+				"preLaunchTask": "ProjectEditor Win64 Development Build",
+				"program": "${config:enginePath}/Engine/Binaries/Win64/UnrealEditor",
+				"args": [
+					"${workspaceFolder}/${config:projectName}.uproject"
+				],
+				"cwd": "${config:enginePath}",
+				"stopAtEntry": false,
+				"externalConsole": true,
+				"type": "cppvsdbg",
+				"visualizerFile": "${config:enginePath}/Engine/Extras/VisualStudioDebugging/Unreal.natvis"
+			},//*/
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"program": "${config:enginePath}/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool",
+				"console": "externalTerminal",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=${workspaceFolder}/${config:projectName}.uproject",
+					"-game",
+					"-engine"
+				],
+				"stopAtEntry": false,
+				"cwd": "${config:enginePath}"
+			}
+		],
+		"compounds": [],
+		"inputs": []
+	}
+}
